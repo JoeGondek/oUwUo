@@ -1,10 +1,11 @@
+
 import numpy
 import random
 import time
 import json
 
 #totally not stolen code  <-- dont you lie to me
-eData = json.load(open('data/enemies.json'))
+eData = json.load(open('enemies.json'))
 def json_extract(obj, key):
 	arr = []
 	def extract(obj, arr, key):
@@ -21,15 +22,15 @@ def json_extract(obj, key):
 	values = extract(obj, arr, key)
 	return values
 
-eHealthInst = json_extract('data/enemies.json', "health")
-eNameInst = json_extract('data/enemies.json', "name")
-eAttInst = json_extract('data/enemies.json', "attack")
+eHealthInst = json_extract('enemies.json', "health")
+eNameInst = json_extract('enemies.json', "name")
+eAttInst = json_extract('enemies.json', "attack")
 
 """
 PLAYER STATS
 """
 
-pData = json.load(open('data/playerStats.json'))
+pData = json.load(open('playerStats.json'))
 
 exp = pData["exp"]
 level = pData["level"]
@@ -42,6 +43,16 @@ magik = pData["magik"]
 speed = pData["speed"]
 damage = pData["damage"]
 attacks = pData["attacks"]
+
+"""
+ENEMY EMPTY STATS
+"""
+
+
+
+"""
+STUFF FOR CHOICES
+"""
 
 """
 ACTUAL GAME STUFF
@@ -63,7 +74,7 @@ def enemy_random():
 
 	elif enemy == 2:
 		enemyName = "Black Dragon"
-		enemyHealth = 150
+		enemyHealth =150
 		enemyDamage = 15 + random.randint(1, 10)
 		enemyAttacks = 1
 		begin_battle()
@@ -84,7 +95,7 @@ def battle():
 		battle_choice = int(input("What would you like to do? "))
 	except:
 		battle()
-
+	
 	if health <= 0:
 		print("You have been defeated you lose all but 15 of your gold, Now go heal and come back later!!!")
 		gold = 15
@@ -106,6 +117,7 @@ def begin_battle():
 		if enemyHealth < 0:
 			break
 		elif health <= 0:
+			print("You have been defeated you lose all but 15 of your gold, Now go heal and come back later!!!")
 			gold = 15
 			time.sleep(1)
 			break
@@ -197,5 +209,3 @@ while True:
 			  print("Wow! You're poor get out of my church you filthy Hobo!")
 		else:
 			print("u stupid why u put in wron g numbEr")
-
-          
