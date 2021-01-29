@@ -1,0 +1,22 @@
+{
+	"generic":{
+		"name": "3rR0r",
+		"health": 1337,
+		"attacks": 69
+	},
+	"knifeMan":{
+		"name": "Guy With Knife",
+ 	 	"health": 25,
+  		"attacks": 2
+	},
+	"dragon":{
+		"name": "Black Dragon",
+		"health": 100,
+		"attacks": 1
+	},
+	"zach":{
+		"name": "Zach",
+		"health": 500,
+		"attacks": 150
+	}
+}
