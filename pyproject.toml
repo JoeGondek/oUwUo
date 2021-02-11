@@ -6,8 +6,8 @@ authors = ["Your Name <you@example.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.8"
-numpy = "^1.19.5"
-extract = "^1.0"
+pickle-warehouse = "^0.1.1"
+gameday = "^0.0.0"
 
 [tool.poetry.dev-dependencies]
 
