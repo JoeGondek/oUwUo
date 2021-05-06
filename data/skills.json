@@ -1,0 +1,20 @@
+{
+	"1":{
+		"name": "Heavy Swing",
+		"multiplier": 2,
+		"mana": 2,
+		"effects": ["stun"]
+	},
+	"2":{
+		"name": "Flames",
+		"multiplier": 2.75,
+		"mana": 4,
+		"effects": ["burn"]
+	},
+	"3":{
+		"name": "Resist",
+		"multiplier": 0,
+		"mana": 1,
+		"effects": ["resistance"]
+	}
+}

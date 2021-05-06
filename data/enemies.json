@@ -18,7 +18,7 @@
 		"damage": 15
 	},
 	"4":{
-		"name": "Zach",
+		"name": "Zack",
 		"health": 500,
 		"attacks": 150,
 		"damage": 50
@@ -28,5 +28,41 @@
 		"health": 1,
 		"attacks": 1,
 		"damage": 999999999999999999999999999
+	},
+	"6":{
+		"name": "Murder Hobo Joe",
+		"health": 420,
+		"attacks": 1,
+		"damage": 69
+	},
+	"7":{
+		"name": "Donut",
+		"health": 35,
+		"attacks": 25,
+		"damage": 1
+	},
+	"8":{
+		"name": "Chad",
+		"health": 80,
+		"attacks": 2,
+		"damage": 30
+	},
+	"9":{
+		"name": "Chad 2 Electric Boogaloo",
+		"health": 160,
+		"attacks": 4,
+		"damage": 60
+	},
+	"10":{
+		"name": "Twitter",
+		"health": 306,
+		"attacks": 40,
+		"damage": 7
+	},
+	"11":{
+		"name": "Donald J. Trumpet",
+		"health": 227,
+		"attacks": 2,
+		"damage": 6
 	}
 }

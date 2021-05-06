@@ -43,16 +43,10 @@ def quietSave():								#Saves the variables without telling the player#
 	with open('data/playerStats.json', 'w') as f:
 		json.dump(pData, f)
 
-def healMenu():
+def levelUp():
 	getData()
-	heal_choice = input("Heal for 15 Gold? ")
-	if heal_choice.upper() == "Y" and gold[0] >= 15:
-		gold[0] -= 15
-		health[0] = maxhealth[0]
-		print("You have been fully healed. O Praise be our Lord and Savior the Giant Flying Spaghetti Monster")
-		quietSave()
-	elif heal_choice.upper() == "N" or gold[0] < 15:
-		print("Wow! You're poor! Get out of my church you filthy hobo!")
-	else:
-		print("huh?")
-		healMenu()
+	levelThreshold = 500 * level[0]
+	if exp[0] >= levelThreshold:
+		level[0] += 1
+		exp[0] -= levelThreshold
+		#quietSave()

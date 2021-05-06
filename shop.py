@@ -43,16 +43,29 @@ def quietSave():								#Saves the variables without telling the player#
 	with open('data/playerStats.json', 'w') as f:
 		json.dump(pData, f)
 
-def healMenu():
+def shoppe():
 	getData()
-	heal_choice = input("Heal for 15 Gold? ")
-	if heal_choice.upper() == "Y" and gold[0] >= 15:
-		gold[0] -= 15
-		health[0] = maxhealth[0]
-		print("You have been fully healed. O Praise be our Lord and Savior the Giant Flying Spaghetti Monster")
-		quietSave()
-	elif heal_choice.upper() == "N" or gold[0] < 15:
-		print("Wow! You're poor! Get out of my church you filthy hobo!")
+	choice = input("items or skills? (I/S)")
+	if choice.upper() == "S" and points[0] >= 1:
+		print("You have " + str(points[0]) + " skill points")
+		print("Which stat would you like to improve?\nHealth (H)\nStrength (S)\nMagic (M)\nUnlock New Skill (3 Points)(U)")
+		choice = input("Selection: ")
+		if choice.upper() == "H":
+			health[0] += 10
+			maxhealth[0] += 10
+		if choice.upper() == "S":
+			strength[0] += 1
+		if choice.upper() == "M":
+			magik[0] += 1
+		if choice.upper() == "U" and points[0] >= 3:
+			skills.append(sData[str(len(skills) + 1)])
+			points[0] -= 2
+		else:
+			print("You don't have enough skill points for a skill")
+		points[0] -= 1
+		print("You have " + str(points[0]) + " skill points left.")
 	else:
-		print("huh?")
-		healMenu()
+		print("You don't have enough levels to upgrade skills! come back when you have more levels.")
+	mana[0] = magik[0]
+	quietSave()
+	exit
